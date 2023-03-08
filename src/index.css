@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Manrope";
+  background: #040c18;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0px; /* width of the entire scrollbar */
+}
+
+@media screen and (max-width: 1200px) {
+  p {
+    font-size: 14px !important;
+  }
+  h2 {
+    font-size: 21px !important;
+  }
+}

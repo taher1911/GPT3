@@ -1,0 +1,55 @@
+@use "src/assets/css/mixins" as css;
+.blogs {
+  h2 {
+    @include css.colordText();
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 1200px) {
+      font-size: 50px !important;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 40px !important;
+      line-height: 65px;
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 30px !important;
+      line-height: 50px;
+      margin-bottom: 2rem;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 25px !important;
+      line-height: 40px;
+    }
+  }
+  .cards__container {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.7fr;
+    gap: 2.5rem;
+    @media screen and (max-width: 1200px) {
+      gap: 1.5rem;
+    }
+    @media screen and (max-width: 990px) {
+      grid-template-columns: 1fr 0.7fr;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+    div {
+      &:nth-of-type(1) {
+        grid-row: 1/3;
+        align-self: stretch;
+        @media screen and (max-width: 600px) {
+          grid-row: 1/2;
+          align-self: auto;
+        }
+      }
+    }
+  }
+}

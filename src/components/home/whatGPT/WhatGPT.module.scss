@@ -1,0 +1,138 @@
+@use "src/assets/css/mixins" as css;
+.WhatGPT {
+  padding: 3rem;
+  margin: 6rem 0;
+  background: #052d56;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  @media screen and (max-width: 1300px) {
+    padding: 2rem;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 2rem 1rem;
+  }
+  @media screen and (max-width: 550px) {
+    margin: 3rem 0;
+  }
+  .top__shadow {
+    z-index: 0;
+    position: absolute;
+    width: 581px;
+    height: 410px;
+    left: -430px;
+    top: -280px;
+
+    background: #0f4279;
+    filter: blur(60px);
+  }
+  .bottom__shadow {
+    position: absolute;
+    width: 623px;
+    height: 558px;
+    left: 83%;
+    top: 82%;
+    background: #1b78de;
+    filter: blur(100px);
+  }
+  .WhatGPT__section1 {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 990px) {
+        flex-direction: column;
+      }
+      h2 {
+        z-index: 1;
+        width: 30%;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 75px;
+        letter-spacing: -0.04em;
+        margin-top: -1rem;
+        @media screen and (max-width: 990px) {
+          width: 100%;
+        }
+        @media screen and (max-width: 550px) {
+          margin-top: 0rem;
+        }
+      }
+      p {
+        width: 70%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        color: #81afdd;
+        @media screen and (max-width: 990px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .WhatGPT__section2 {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+      margin: 3rem 0;
+    }
+    @media screen and (max-width: 550px) {
+      margin: 2rem 0;
+    }
+    h2 {
+      @include css.colordText();
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 45px;
+      width: 45%;
+
+      @media screen and (max-width: 1300px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 990px) {
+        width: 100%;
+      }
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      color: #ff8a71;
+    }
+  }
+  .WhatGPT__section3 {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+    }
+    div {
+      width: 30%;
+      z-index: 1;
+      @media screen and (max-width: 1300px) {
+        width: 32%;
+      }
+      @media screen and (max-width: 990px) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 75px;
+        letter-spacing: -0.04em;
+        margin-top: -1rem;
+        @media screen and (max-width: 550px) {
+          margin-top: 0rem;
+        }
+      }
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        color: #81afdd;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use "src/assets/css/mixins" as css;
+.openAi {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin: 10rem 0 2rem;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 550px) {
+    margin: 4rem 0 2rem;
+  }
+  .title {
+    width: 35%;
+    position: relative;
+    z-index: 2;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .shadow {
+      position: absolute;
+      width: 350px;
+      height: 300px;
+      left: -325px;
+      top: -9%;
+      z-index: -1;
+      background: #07325f;
+      filter: blur(156px);
+    }
+    h2 {
+      @include css.colordText();
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 45px;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      color: #ff8a71;
+    }
+  }
+  .content {
+    width: 50%;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 680px) {
+        flex-direction: column;
+      }
+      .content__title {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 680px) {
+          width: 100%;
+        }
+        .title {
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: -0.04em;
+        }
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        color: #81afdd;
+        width: 60%;
+        @media screen and (max-width: 680px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
